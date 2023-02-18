@@ -9,7 +9,7 @@ export default function MyHead({ children }: Props) {
         <>
             <Head>
                 <meta name="description" content="PocoPota Portfolio"></meta>
-                <link rel="icon" href="https://pocopota.com/favicon.ico" sizes="16x16" type="image/ico"></link>
+                <link rel="icon" href="https://pocopota.com/favicon.ico"></link>
                 <meta property="og:description" content="PocoPota Portfolio"></meta>
                 <meta name="twitter:card" content="summary_large_image"></meta>
                 <meta property="og:image" content="https://pocopota.com/ogp.png"></meta>
