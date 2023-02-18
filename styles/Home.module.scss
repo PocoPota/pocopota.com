@@ -20,12 +20,13 @@
             .firstIcon {
                 border-radius: 50%;
             }
-            .firstRight{
+
+            .firstRight {
                 .firstName {
                     font-size: 30px;
                     font-weight: 600;
                 }
-    
+
                 .firstWord {
                     font-size: 18px;
                     color: variables.$gray;
@@ -358,6 +359,10 @@
 // about調整用
 @media screen and (max-width: 1700px) {
     .about {
+        .title {
+            margin-top: 150px;
+        }
+
         .aboutInner {
             flex-direction: column;
             max-width: calc(232px * 3 + 30px * 2);
@@ -371,11 +376,11 @@
 }
 
 // スマートフォン
-@media screen and (max-width: 480px){
-    .main{
-        .first{
+@media screen and (max-width: 480px) {
+    .main {
+        .first {
 
-            .firstCenter{
+            .firstCenter {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -384,72 +389,92 @@
                 height: 100vh;
                 top: 0;
                 left: 0;
-                .firstRight{
+
+                .firstRight {
                     width: 95%;
-                    .firstName{
+
+                    .firstName {
                         text-align: center;
                     }
-                    .firstWord{
+
+                    .firstWord {
                         width: 100%;
                         text-align: center;
                     }
                 }
             }
         }
-        .about{
-            .title{
+
+        .about {
+            .title {
                 margin-top: 150px;
             }
-            .aboutInner{
+
+            .aboutInner {
                 width: 90% !important;
                 min-width: 0;
             }
-            .aboutLinks{
+
+            .aboutLinks {
                 min-width: 0 !important;
-                ul{
+
+                ul {
                     width: 100% !important;
                     justify-content: center;
                 }
             }
         }
-        .works{
-            .worksList{
-                ul{
-                    li{
-                        figure{
-                            background: #135796;
-                            img{
-                                transform: none;
-                                transition:none;
-                                opacity: 1 !important;
-                            }
-                            figcaption{
-                                transform: none;
-                                opacity: 1;
-                                position: relative;
-                                width: 390px;
-                                padding: 0 30px;
+
+        .works {
+            .worksList {
+                ul {
+                    li {
+                        width: 95%;
+                        a{
+                            display: flex;
+                            justify-content: center;
+                            figure {
+                                background: #135796;
+                                width: 100%;
+    
+                                img {
+                                    transform: none;
+                                    transition: none;
+                                    opacity: 1 !important;
+                                    width: 100%;
+                                }
+    
+                                figcaption {
+                                    transform: none;
+                                    opacity: 1;
+                                    position: relative;
+                                    padding: 0 30px;
+                                }
                             }
                         }
                     }
                 }
             }
         }
-        .contact{
-            .contactLinks{
+
+        .contact {
+            .contactLinks {
                 min-width: 0;
-                ul{
+
+                ul {
                     display: flex;
                     justify-content: center;
                 }
             }
         }
     }
+
     .article {
         article {
             width: 90%;
             margin: 0 auto;
         }
+
         margin-bottom: 100px;
     }
 }
