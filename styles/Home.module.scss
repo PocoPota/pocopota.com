@@ -1,0 +1,448 @@
+// 変数ファイル
+@use "./variables";
+
+.main {
+
+    .first {
+        width: 100%;
+        height: 100vh;
+
+        .firstCenter {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            width: calc(160px + 50px + 400px);
+            position: relative;
+            top: calc(100vh/2 - 160px/2);
+            left: calc(100%/2 - (160px + 50px + 400px) + 100px);
+            margin-top: -100vh;
+
+            .firstIcon {
+                border-radius: 50%;
+            }
+            .firstRight{
+                .firstName {
+                    font-size: 30px;
+                    font-weight: 600;
+                }
+    
+                .firstWord {
+                    font-size: 18px;
+                    color: variables.$gray;
+                    height: 1rem;
+                    width: 400px;
+                }
+            }
+        }
+    }
+
+    .about {
+        width: 100%;
+        min-height: 100vh;
+        background: linear-gradient(129deg, #ff99ff, #cc99ff, #9999ff, #99ccff, #99ffff);
+        background-size: 2400% 2400%;
+        -webkit-animation: AnimationName 47s ease infinite;
+        -moz-animation: AnimationName 47s ease infinite;
+        -o-animation: AnimationName 47s ease infinite;
+        animation: AnimationName 47s ease infinite;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .title {
+            font-size: 50px;
+            font-weight: 700;
+            font-family: 'Bebas Neue', cursive;
+            text-align: center;
+        }
+
+        .aboutInner {
+            display: flex;
+            justify-content: center;
+            gap: 100px;
+            margin: 100px auto;
+
+            .aboutCard {
+                width: 490px;
+                padding: 38px;
+                // すりガラス風
+                background: rgba(255, 255, 255, 0.25);
+                backdrop-filter: blur(10px);
+                border-radius: 16px;
+                box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                border: 1px solid rgba(255, 255, 255, 0.3);
+
+                &:hover {
+                    transform: perspective(3000px) rotateY(0deg);
+                }
+
+                .aboutHeader {
+                    display: flex;
+                    justify-content: space-between;
+
+                    .aboutHeaderLeft {
+                        .aboutHeaderTop {
+                            font-weight: 900;
+                            font-size: 40px;
+                        }
+
+                        .aboutHeaderMiddle {
+                            font-weight: 700;
+                            font-size: 20px;
+                            line-height: 1.4em;
+                            margin-top: 8px;
+                        }
+                    }
+
+                    .aboutHeaderRight {
+                        .aboutHeaderImg {
+                            border-radius: 50%;
+                        }
+                    }
+                }
+
+                .aboutMain {
+                    font-size: 17px;
+                    line-height: 1.4em;
+                    color: variables.$fontGray;
+                    margin-top: 14px;
+                }
+            }
+
+            .aboutLinks {
+                max-width: calc(232px * 3 + 30px * 2);
+                min-width: 410px;
+
+                ul {
+                    margin: 0;
+                    padding: 0;
+                    width: 100%;
+                    display: flex;
+                    gap: 30px;
+                    flex-wrap: wrap;
+
+                    li {
+                        list-style: none;
+                        padding: 10px 15px;
+                        border-radius: 8px;
+                        width: 200px;
+                        height: 40px;
+                        background: rgba(255, 255, 255, 0.25);
+                        backdrop-filter: blur(10px);
+                        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                        border: 1px solid rgba(255, 255, 255, 0.3);
+
+                        &:hover {
+                            box-shadow: none;
+                        }
+
+                        .linkA {
+                            display: flex;
+                            align-items: center;
+                            gap: 10px;
+                            text-decoration: none;
+
+                            &[href^="/none"] {
+                                pointer-events: none;
+                            }
+
+                            .linkIcon {
+                                font-size: 27px;
+                                line-height: 27px;
+                            }
+
+                            .linkInfo {
+                                .linkTitle {
+                                    font-size: 17px;
+                                    font-weight: 500;
+                                    color: #000;
+                                }
+
+                                .linkId {
+                                    color: variables.$fontGray;
+                                    font-size: 14.5px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .works {
+        margin: 150px 0;
+        background-size: 2400% 2400%;
+        -webkit-animation: AnimationName 47s ease infinite;
+        -moz-animation: AnimationName 47s ease infinite;
+        -o-animation: AnimationName 47s ease infinite;
+        animation: AnimationName 47s ease infinite;
+
+        .title {
+            font-size: 50px;
+            font-weight: 700;
+            font-family: 'Bebas Neue', cursive;
+            text-align: center;
+        }
+
+        .worksList {
+            ul {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 30px;
+                max-width: calc(390px * 3 + 30px * 2);
+                margin: 0 auto;
+                margin-top: 60px;
+                padding: 0;
+
+                li {
+                    list-style: none;
+                }
+            }
+        }
+    }
+
+    .contact {
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        background: linear-gradient(129deg, #cc99ff, #9999ff, #99ccff, #99ffff, #ff99ff);
+        background-size: 2400% 2400%;
+        -webkit-animation: AnimationName 47s ease infinite;
+        -moz-animation: AnimationName 47s ease infinite;
+        -o-animation: AnimationName 47s ease infinite;
+        animation: AnimationName 47s ease infinite;
+
+        .title {
+            font-size: 50px;
+            font-weight: 700;
+            font-family: 'Bebas Neue', cursive;
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        .contactLinks {
+            max-width: calc(232px * 3 + 30px * 2);
+            min-width: 410px;
+            margin: 100px auto 150px auto;
+
+            ul {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                display: flex;
+                gap: 30px;
+                flex-wrap: wrap;
+
+                li {
+                    list-style: none;
+                    padding: 10px 15px;
+                    border-radius: 8px;
+                    width: 200px;
+                    height: 40px;
+                    background: rgba(255, 255, 255, 0.25);
+                    backdrop-filter: blur(10px);
+                    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                    border: 1px solid rgba(255, 255, 255, 0.3);
+
+                    &:hover {
+                        box-shadow: none;
+                    }
+
+                    .linkA {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        text-decoration: none;
+
+                        &[href^="/none"] {
+                            pointer-events: none;
+                        }
+
+                        .linkIcon {
+                            font-size: 27px;
+                            line-height: 27px;
+                        }
+
+                        .linkInfo {
+                            .linkTitle {
+                                font-size: 17px;
+                                font-weight: 500;
+                                color: #000;
+                            }
+
+                            .linkId {
+                                color: variables.$fontGray;
+                                font-size: 14.5px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 背景アニメーション
+@-webkit-keyframes AnimationName {
+    0% {
+        background-position: 0% 88%
+    }
+
+    50% {
+        background-position: 100% 13%
+    }
+
+    100% {
+        background-position: 0% 88%
+    }
+}
+
+@-moz-keyframes AnimationName {
+    0% {
+        background-position: 0% 88%
+    }
+
+    50% {
+        background-position: 100% 13%
+    }
+
+    100% {
+        background-position: 0% 88%
+    }
+}
+
+@-o-keyframes AnimationName {
+    0% {
+        background-position: 0% 88%
+    }
+
+    50% {
+        background-position: 100% 13%
+    }
+
+    100% {
+        background-position: 0% 88%
+    }
+}
+
+@keyframes AnimationName {
+    0% {
+        background-position: 0% 88%
+    }
+
+    50% {
+        background-position: 100% 13%
+    }
+
+    100% {
+        background-position: 0% 88%
+    }
+}
+
+
+// article
+.article {
+    article {
+        width: 800px;
+        margin: 100px auto;
+
+        h1 {
+            font-size: 30px;
+        }
+    }
+}
+
+// レスポンシブ
+// about調整用
+@media screen and (max-width: 1700px) {
+    .about {
+        .aboutInner {
+            flex-direction: column;
+            max-width: calc(232px * 3 + 30px * 2);
+            min-width: 410px;
+
+            .aboutCard {
+                width: calc(100% - 76px) !important;
+            }
+        }
+    }
+}
+
+// スマートフォン
+@media screen and (max-width: 480px){
+    .main{
+        .first{
+
+            .firstCenter{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100vh;
+                top: 0;
+                left: 0;
+                .firstRight{
+                    width: 95%;
+                    .firstName{
+                        text-align: center;
+                    }
+                    .firstWord{
+                        width: 100%;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+        .about{
+            .title{
+                margin-top: 150px;
+            }
+            .aboutInner{
+                width: 90% !important;
+                min-width: 0;
+            }
+            .aboutLinks{
+                min-width: 0 !important;
+                ul{
+                    width: 100% !important;
+                    justify-content: center;
+                }
+            }
+        }
+        .works{
+            .worksList{
+                ul{
+                    li{
+                        figure{
+                            background: #135796;
+                            img{
+                                transform: none;
+                                transition:none;
+                                opacity: 1 !important;
+                            }
+                            figcaption{
+                                transform: none;
+                                opacity: 1;
+                                position: relative;
+                                width: 390px;
+                                padding: 0 30px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .contact{
+            .contactLinks{
+                min-width: 0;
+                ul{
+                    display: flex;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}
