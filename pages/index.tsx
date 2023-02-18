@@ -1,10 +1,10 @@
-import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import Script from 'next/script'
 import styles from '../styles/Home.module.scss'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import MyHead from '../components/MyHead'
 import { microcms } from '../lib/microcms'
 import type { LinkType } from '../lib/linkType'
 import type { WorksType } from '../lib/worksType'
@@ -13,11 +13,13 @@ import type { ContactType } from '../lib/contactType'
 export default function Home({ links, works, contact }: Props) {
     return (
         <>
-            <Head>
+            <MyHead>
                 <title>PocoPota</title>
+                <meta property="og:title" content="PocoPota" />
+                <meta property="og:url" content="https://pocopota.com" />
                 <link rel='stylesheet' href='/fontawesome/all.min.css'></link>
                 <link rel='stylesheet' href='/staticLib/css/imagehover.min.css'></link>
-            </Head>
+            </MyHead>
             <main className={styles.main}>
                 <section className={styles.first}>
                     <canvas className="fireworks"></canvas>

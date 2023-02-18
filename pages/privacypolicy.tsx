@@ -1,17 +1,16 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import Link from 'next/link'
-import Script from 'next/script'
 import styles from '../styles/Home.module.scss'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import MyHead from '../components/MyHead'
 
 export default function Home() {
     return (
         <>
-            <Head>
+            <MyHead>
                 <title>プライバシーポリシー | PocoPota</title>
-            </Head>
+                <meta property="og:title" content="プライバシーポリシー | PocoPota" />
+                <meta property="og:url" content="https://pocopota.com/privacypolicy" />
+            </MyHead>
             <Header></Header>
             <main className={styles.article}>
                 <article>
