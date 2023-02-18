@@ -112,7 +112,7 @@ export default function Home({ links, works, contact }: Props) {
             </main>
             <Footer></Footer>
             <Script src='staticLib/js/ityped.js' strategy='beforeInteractive' />
-            <Script src='staticLib/js/anime.min.js' strategy='afterInteractive' />
+            <Script src='staticLib/js/anime.min.js' strategy='beforeInteractive' />
             <Script src='staticLib/js/lib.js' strategy='afterInteractive' />
         </>
     )
